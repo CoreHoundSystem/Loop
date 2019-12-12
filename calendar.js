@@ -8,7 +8,7 @@ function checkCalendar() {
 		'orderBy': 'startTime'
 	}).then(function(response) {
 		var events = response.result.items;
-		appendPre('Upcoming events:');
+		console.log('Upcoming events:');
 
 		if (events.length > 0) {
 			for (i = 0; i < events.length; i++) {
@@ -17,10 +17,10 @@ function checkCalendar() {
 				if (!when) {
 					when = event.start.date;
 				}
-				appendPre(event.summary + ' (' + when + ')')
+				console.log(event.summary + ' (' + when + ')')
 			}
 		} else {
-			appendPre('No upcoming events found.');
+			console.log('No upcoming events found.');
 		}
 	});
 }
