@@ -25,7 +25,7 @@ function initClient() {
 		authorizeButton.onclick = handleAuthClick;	//alter buttons as needed - cosmetic
 		signoutButton.onclick = handleSignoutClick;
 	}, function(error) {
-		appendPre(JSON.stringify(error, null, 2));
+		console.log(JSON.stringify(error, null, 2));
 	});
 }
 
