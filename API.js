@@ -51,6 +51,7 @@ function handleSignoutClick(event) {
 }
 
 function onSignIn() {
+	/*
 	loadModal(3000,'Authorizing Application...');
 	obj={resourceName:'people/me',personFields:'addresses,ageRanges,biographies,birthdays,coverPhotos,emailAddresses,events,genders,imClients,interests,locales,memberships,metadata,names,nicknames,organizations,occupations,phoneNumbers,photos,relations,relationshipStatuses,residences,skills,urls,userDefined'};
 	gapi.client.people.people.get(obj).then(function(response) {
@@ -60,4 +61,6 @@ function onSignIn() {
 	function(err) { 
 		console.error("Execute error",err);
 	})
+	*/
+	checkCalendar();
 }
