@@ -20,7 +20,7 @@ ADD EVENT
 
 */
 function checkCalendar(u) {
-	gapi.client.calendar.events.insert({
+	gapi.client.calendar.insert({
 		'summary':'Loop Calendar'
 		
 	}).then(function(response) {
