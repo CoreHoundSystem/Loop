@@ -1,6 +1,8 @@
+lCal='Y29yZWhvdW5kc3lzdGVtLmNvbV9tN3VyNXZ1MWV0aGVpZTg5aXFlc3Fib3Zmb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t';
+
 function checkCalendar() {
 	gapi.client.calendar.events.list({
-		'calendarId': 'primary',
+		'calendarId': lCal,
 		'timeMin': (new Date()).toISOString(),
 		'showDeleted': false,
 		'singleEvents': true,
