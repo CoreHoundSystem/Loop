@@ -1,5 +1,5 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
-core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System','sheet':'1XAOvPnompoTV0r7OU4dTnlOkhi1LXRvXvqj7VKwOODg','sheet2':'2PACX-1vRO1Iitf57HP4QFzct_0et_pPdUN5gFkMI_QZGHvKVI4q9TZuhdFxm7gjNkqxJr0phM3aRQXDD0Y1EH'};
+core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System','sheet':'1XAOvPnompoTV0r7OU4dTnlOkhi1LXRvXvqj7VKwOODg'};
 u='uuid';
 
 /* FLOW
@@ -27,9 +27,9 @@ function checkCalendar() {
 		'range': 'Sheet1!A2',
 		'majorDimension':'ROWS',
 		'valueInputOption': 'RAW',
-		'values':[["Test 1"]]
+		'values':[['Test 1']]
 	}).then(function(response) {
-		apprendPre(response);
+		appendPre(response);
 	}, function(response) {
 		appendPre('Error: ' + response.result.error.message);
 	});
