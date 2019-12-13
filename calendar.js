@@ -1,5 +1,5 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
-core={'email':'info@corehoundsystem.com','name':'Loop by Core Hound System'};
+core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System'};
 gmail='info@thesassyalpaca.com';
 relIDs='monday,thursday,fishing,songs';
 u='monday';
@@ -21,7 +21,8 @@ ADD EVENT
 */
 function checkCalendar(u) {
 	gapi.client.calendar.calendars.insert({
-		'summary':'Loop Calendar'
+		'summary':'Loop Calendar',
+		'timeZone':'America/Los_Angeles'
 		
 	}).then(function(response) {
 		console.log(response);
