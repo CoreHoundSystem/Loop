@@ -26,7 +26,7 @@ function checkCalendar(u) {
 	}).then(function(response) {
 		console.log(response);
 		gapi.client.calendar.events.insert({
-			'calendarId': response.calendarId,
+			'calendarId': response.result.id,
 			"end": {
 				'dateTime':'2019-12-20T14:00:00-08:00'
 			},
