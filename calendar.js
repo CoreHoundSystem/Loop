@@ -1,8 +1,6 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
-core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System'};
-gmail='info@thesassyalpaca.com';
-relIDs='monday,thursday,fishing,songs';
-u='monday';
+core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System','sheet':'1XAOvPnompoTV0r7OU4dTnlOkhi1LXRvXvqj7VKwOODg'};
+u='uuid';
 
 /* FLOW
 user logs in - check to see if the user has a line in USER SHEETS
@@ -19,9 +17,26 @@ ADD EVENT
 			Use cURL to interpret this data
 
 */
-function checkCalendar(u) {
+function appendPre(x) {
+	console.log(x);
+}
+
+function checkCalendar() {
+	gapi.client.sheets.spreadsheets.values.update({
+		spreadsheetId: core.sheet,
+		range: 'Sheet1!A2',
+		values:['Test 1']
+	}).then(function(response) {
+		apprendPre(response);
+	}, function(response) {
+		appendPre('Error: ' + response.result.error.message);
+	});
+	
+	
+	//THIS WORKS
+	/*
 	gapi.client.calendar.calendars.insert({
-		'summary':'Loop Calendar',
+		'summary':'Loop Calendar - ' + u,
 		'timeZone':'America/Los_Angeles'
 		
 	}).then(function(response) {
@@ -29,10 +44,10 @@ function checkCalendar(u) {
 		gapi.client.calendar.events.insert({
 			'calendarId': response.result.id,
 			"end": {
-				'dateTime':'2019-12-20T14:00:00-08:00'
+				'dateTime':'2019-12-20T19:00:00-08:00'
 			},
 			'start': {
-				'dateTime':'2019-12-20T13:00:00-08:00'
+				'dateTime':'2019-12-20T17:00:00-08:00'
 			},
 			'description':'Test Event Share',
 			'attendees':[
@@ -46,6 +61,7 @@ function checkCalendar(u) {
 			console.log(response);
 		});
 	});
+	*/
 }
 	
 	/*
