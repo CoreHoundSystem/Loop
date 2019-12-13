@@ -1,4 +1,4 @@
-lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo%40group.calendar.google.com';
+lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
 
 function checkCalendar() {
 	gapi.client.calendar.events.list({
