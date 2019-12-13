@@ -23,9 +23,10 @@ function appendPre(x) {
 
 function checkCalendar() {
 	gapi.client.sheets.spreadsheets.values.update({
-		spreadsheetId: core.sheet,
-		range: 'Sheet1!A2',
-		values:['Test 1']
+		'spreadsheetId': core.sheet,
+		'range': 'Sheet1!A2',
+		'majorDimension':'ROWS',
+		'values':['Test 1']
 	}).then(function(response) {
 		apprendPre(response);
 	}, function(response) {
