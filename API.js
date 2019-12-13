@@ -1,8 +1,8 @@
 var CLIENT_ID = '76239223139-cvbeb2os8iosv39l5p75t0jula6p193k.apps.googleusercontent.com';
 var API_KEY = 'AIzaSyBX5kq8GHwVyk_1I4sGRWRHE-zfs2obO4E';
 
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-var SCOPES = "https://www.googleapis.com/auth/calendar";
+var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest","https://sheets.googleapis.com/$discovery/rest?version=v4"];
+var SCOPES = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/spreadsheets";
 
 var authorizeButton = document.getElementById('authorize_button');
 var signoutButton = document.getElementById('signout_button');
@@ -51,16 +51,5 @@ function handleSignoutClick(event) {
 }
 
 function onSignIn() {
-	/*
-	loadModal(3000,'Authorizing Application...');
-	obj={resourceName:'people/me',personFields:'addresses,ageRanges,biographies,birthdays,coverPhotos,emailAddresses,events,genders,imClients,interests,locales,memberships,metadata,names,nicknames,organizations,occupations,phoneNumbers,photos,relations,relationshipStatuses,residences,skills,urls,userDefined'};
-	gapi.client.people.people.get(obj).then(function(response) {
-		console.log(response);
-		loadAccount(response);
-	},
-	function(err) { 
-		console.error("Execute error",err);
-	})
-	*/
 	checkCalendar();
 }
