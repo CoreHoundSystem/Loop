@@ -1,8 +1,40 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
+gmail='info@thesassyalpaca.com';
 relIDs='monday,thursday,fishing,songs';
 u='monday';
 
+
 function checkCalendar(u) {
+	gapi.client.calendar.acl.insert({
+		'calendarId': lCal,
+		'resource':{
+			'role':'writer',
+			'scope':{
+				'type':'user',
+				'value':gmail
+			}
+		}
+	}).then(function(response) {
+		console.log(response);
+	});
+}
+	/*
+	see if the user has a calendar with specific name
+		yes-proceed
+		no-create calendar with specific name
+			hide calendar?
+			desc,id,summary,timeZone
+			*/
+
+
+
+
+
+
+
+
+
+/*
 	gapi.client.calendar.events.list({
 		'calendarId': lCal,
 		'timeMin': (new Date()).toISOString(),
@@ -46,3 +78,4 @@ function addEvent() {
 		console.log(response);
 	});
 }
+*/
