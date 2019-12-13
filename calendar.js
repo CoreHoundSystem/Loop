@@ -26,6 +26,7 @@ function checkCalendar() {
 		'spreadsheetId': core.sheet,
 		'range': 'Sheet1!A2',
 		'majorDimension':'ROWS',
+		'valueInputOption': 'RAW',
 		'values':['Test 1']
 	}).then(function(response) {
 		apprendPre(response);
