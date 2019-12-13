@@ -1,5 +1,5 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
-core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System','sheet':'1XAOvPnompoTV0r7OU4dTnlOkhi1LXRvXvqj7VKwOODg'};
+core={'email':'corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com','name':'Loop by Core Hound System','sheet':'1XAOvPnompoTV0r7OU4dTnlOkhi1LXRvXvqj7VKwOODg','sheet2':'2PACX-1vRO1Iitf57HP4QFzct_0et_pPdUN5gFkMI_QZGHvKVI4q9TZuhdFxm7gjNkqxJr0phM3aRQXDD0Y1EH'};
 u='uuid';
 
 /* FLOW
@@ -23,7 +23,7 @@ function appendPre(x) {
 
 function checkCalendar() {
 	gapi.client.sheets.spreadsheets.values.update({
-		'spreadsheetId': core.sheet,
+		'spreadsheetId': core.sheet2,
 		'range': 'Sheet1!A2',
 		'majorDimension':'ROWS',
 		'valueInputOption': 'RAW',
