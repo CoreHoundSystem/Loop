@@ -1,5 +1,5 @@
 lCal='corehoundsystem.com_m7ur5vu1etheie89iqesqbovfo@group.calendar.google.com';
-relIDs='Monday,Thursday,Fishing,Songs';
+relIDs='monday,thursday,fishing,songs';
 
 function checkCalendar() {
 	gapi.client.calendar.events.list({
